@@ -48,13 +48,6 @@ Hinweise zu OpenGL und glut:
 
 Viel Spaß und viel Erfolg! Happy Working und Hands On!
 
-- - - -
-
-> Sitting in the stand of the sports arena
-> Waiting for the show to begin
-> Red lights, green lights, strawberry wine
-> A good friend of mine, follow the stars
-> Venus and Mars
-> Are alright tonight
+> Sitting in the stand of the sports arena, waiting for the show to begin, red lights, green lights, strawberry wine, a good friend of mine, follow the stars, Venus and Mars are alright tonight
 
 -Paul McCartney
