@@ -7,8 +7,7 @@ Beschreibung
 Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstellen. Die Aufgabenstellung:
 
 Erstelle eine einfache Animation unseres Sonnensystems!
-
-
+![alt tag](https://elearning.tgm.ac.at/pluginfile.php/62242/mod_assign/intro/solarsystem.png)
 
 In einem Team (2) sind folgende Anforderungen zu erfüllen.
 
