@@ -6,9 +6,8 @@ Beschreibung
 Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstellen. Die Aufgabenstellung:
 
 Erstelle eine einfache Animation unseres Sonnensystems!
-![Angabe](http://i66.tinypic.com/156e1e1.jpg)
 
-- - - -
+![Angabe](http://i66.tinypic.com/156e1e1.jpg)
 
 In einem Team (2) sind folgende Anforderungen zu erfüllen.
 
@@ -46,4 +45,5 @@ Die Kameraposition wird mittels gluLookAt() gesetzt
 Bedenken Sie bei der Perspektive, dass entfernte Objekte kleiner - nahe entsprechende größer darzustellen sind.
 Wichtig ist dabei auch eine möglichst glaubhafte Darstellung. gluPerspective(), glFrustum()
 Für das Einbetten einer Textur kann die Library Pillow verwendet werden! Die Community unterstützt Sie bei der Verwendung.
-Viel Spaß und viel Erfolg!
+
+Viel Spaß und viel Erfolg! Happy Working und Hands On!
