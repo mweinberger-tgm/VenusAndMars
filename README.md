@@ -3,11 +3,12 @@ Solarsystem in Python | Taschner/Weinberger 5BHIT | 2015/16
 
 Beschreibung
 ====
-
 Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstellen. Die Aufgabenstellung:
 
 Erstelle eine einfache Animation unseres Sonnensystems!
-![alt tag](https://elearning.tgm.ac.at/pluginfile.php/62242/mod_assign/intro/solarsystem.png)
+![Angabe](http://i66.tinypic.com/156e1e1.jpg)
+
+- - - -
 
 In einem Team (2) sind folgende Anforderungen zu erfüllen.
 
@@ -24,7 +25,9 @@ Mittels Mausklick kann eine Punktlichtquelle und die Textierung ein- und ausgesc
 Schatten: Auch Monde und Planeten werfen Schatten.
 Wählt ein geeignetes 3D-Framework für Python (Liste unter https://wiki.python.org/moin/PythonGameLibraries) und implementiert die Applikation unter Verwendung dieses Frameworks.
 
-Abgabe: Die Aufgabe wird uns die nächsten Wochen begleiten und ist wie ein (kleines) Softwareprojekt zu realisieren, weshalb auch eine entsprechende Projektdokumentation notwendig ist. Folgende Inhalte sind in jedem Fall verpflichtend:
+Abgabe
+====
+Die Aufgabe wird uns die nächsten Wochen begleiten und ist wie ein (kleines) Softwareprojekt zu realisieren, weshalb auch eine entsprechende Projektdokumentation notwendig ist. Folgende Inhalte sind in jedem Fall verpflichtend:
 
 Projektbeschreibung (Anforderungen, Teammitglieder, Rollen, Tools, ...)
 GUI-Skizzen und Bedienkonzept (Schnittstellenentwürfe, Tastaturbelegung, Maussteuerung, ...)
@@ -34,6 +37,7 @@ Achtung: Bitte überlegt euch eine saubere Architektur!
 Den gesamten Source Code in 1 Klasse zu packen ist nicht ausreichend!
 Kurze Bedienungsanleitung
 Sauberes Dokument (Titelblatt, Kopf- und Fußzeile, ...)
+
 Hinweise zu OpenGL und glut:
 
 Ein Objekt kann einfach mittels glutSolidSphere() erstellt werden.
