@@ -1,8 +1,7 @@
 # VenusAndMars
 Solarsystem in Python | Taschner/Weinberger 5BHIT | 2015/16
 
-Beschreibung
-====
+## Beschreibung ##
 Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstellen. Die Aufgabenstellung:
 
 Erstelle eine einfache Animation unseres Sonnensystems!
@@ -24,8 +23,7 @@ Mittels Mausklick kann eine Punktlichtquelle und die Textierung ein- und ausgesc
 Schatten: Auch Monde und Planeten werfen Schatten.
 Wählt ein geeignetes 3D-Framework für Python (Liste unter https://wiki.python.org/moin/PythonGameLibraries) und implementiert die Applikation unter Verwendung dieses Frameworks.
 
-Abgabe
-====
+## Abgabe ##
 Die Aufgabe wird uns die nächsten Wochen begleiten und ist wie ein (kleines) Softwareprojekt zu realisieren, weshalb auch eine entsprechende Projektdokumentation notwendig ist. Folgende Inhalte sind in jedem Fall verpflichtend:
 
 Projektbeschreibung (Anforderungen, Teammitglieder, Rollen, Tools, ...)
