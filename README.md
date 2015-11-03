@@ -47,3 +47,7 @@ Hinweise zu OpenGL und glut:
 * Für das Einbetten einer Textur kann die Library Pillow verwendet werden! Die Community unterstützt Sie bei der Verwendung.
 
 Viel Spaß und viel Erfolg! Happy Working und Hands On!
+
+> Sitting in the stand of the sports arena, waiting for the show to begin, red lights, green lights, strawberry wine, a good friend of mine, follow the stars, Venus and Mars are alright tonight
+
+-Paul McCartney
