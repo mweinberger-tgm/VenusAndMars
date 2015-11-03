@@ -1,9 +1,6 @@
 # VenusAndMars
 Solarsystem in Python | Taschner/Weinberger 5BHIT | 2015/16
 
-
-
-
 ## Beschreibung ##
 Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstellen. Die Aufgabenstellung:
 
