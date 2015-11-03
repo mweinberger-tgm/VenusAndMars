@@ -39,11 +39,11 @@ Die Aufgabe wird uns die nächsten Wochen begleiten und ist wie ein (kleines) Sof
 
 Hinweise zu OpenGL und glut:
 
-Ein Objekt kann einfach mittels glutSolidSphere() erstellt werden.
-Die Planten werden mittels Modelkommandos bewegt: glRotate(), glTranslate()
-Die Kameraposition wird mittels gluLookAt() gesetzt
-Bedenken Sie bei der Perspektive, dass entfernte Objekte kleiner - nahe entsprechende größer darzustellen sind.
-Wichtig ist dabei auch eine möglichst glaubhafte Darstellung. gluPerspective(), glFrustum()
-Für das Einbetten einer Textur kann die Library Pillow verwendet werden! Die Community unterstützt Sie bei der Verwendung.
+* Ein Objekt kann einfach mittels glutSolidSphere() erstellt werden.
+* Die Planten werden mittels Modelkommandos bewegt: glRotate(), glTranslate()
+* Die Kameraposition wird mittels gluLookAt() gesetzt
+* Bedenken Sie bei der Perspektive, dass entfernte Objekte kleiner - nahe entsprechende größer darzustellen sind.
+* Wichtig ist dabei auch eine möglichst glaubhafte Darstellung. gluPerspective(), glFrustum()
+* Für das Einbetten einer Textur kann die Library Pillow verwendet werden! Die Community unterstützt Sie bei der Verwendung.
 
 Viel Spaß und viel Erfolg! Happy Working und Hands On!
