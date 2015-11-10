@@ -6,7 +6,7 @@ Wir wollen unser Wissen aus SEW nutzen, um eine kreative Applikation zu erstelle
 
 Erstelle eine einfache Animation unseres Sonnensystems!
 
-![Angabe](http://i66.tinypic.com/156e1e1.jpg)
+![Angabe](http://imgur.com/aan1ImK)
 
 In einem Team (2) sind folgende Anforderungen zu erfüllen.
 
