@@ -1,0 +1,242 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper,oneside,ngerman]{scrartcl}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage[page]{totalcount}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{tabularx}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{ulem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{g1}{RGB}{224,255,255}
+\definecolor{g2}{RGB}{37,147,37}
+\definecolor{g3}{RGB}{29,114,29}
+\definecolor{g4}{RGB}{20,42,20}
+\definecolor{listings}{rgb}{0.96, 0.96, 0.96}
+
+% Java Syntaxhighligthning
+% strings
+\definecolor{javared}{rgb}{0.6,0,0}
+% comments
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35}
+% keywords
+\definecolor{javapurple}{rgb}{0.5,0,0.35}
+% javadoc
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Margin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
+
+\lstdefinestyle{Java}{
+	language=Java,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Own Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raggedright
+\newcommand{\tabhvent}[1]{\noindent\parbox[c]{\hsize}{#1}}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\thispagestyle{empty}
+\vspace*{2cm}
+
+
+\begin{center}
+\begin{huge}
+\renewcommand{\ULthickness}{2pt}
+\uline{Dokumentation}
+\\
+\uline{Solarsystem}
+\end{huge}
+\end{center}
+
+\vspace{9cm}
+
+\textit{\textbf{Teammitglieder: Thomas Taschner, Michael Weinberger}}
+\vspace{10mm}
+
+\textbf{{\color{g4}Version 1.0 \hfill 17.11.2015 \hfill Status: [DRAFT]}}
+\\
+%Table
+\begin{table}[h]
+\renewcommand{\arraystretch}{2.1}
+\centering
+\begin{tabularx}{\textwidth}{|s|s|b|b|}
+
+\specialrule{0.07em}{0em}{0em}
+\multicolumn{4}{|l|}{\textbf{Git-Pfad:} /doc/dokumentation \hfill \textbf{Dokument:} dokumentation.tex} \\ \hline
+\end{tabularx}
+\end{table}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header & Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength\headheight{15pt}
+\lhead{Solarsystem}
+\rhead{Version 1.0}
+\lfoot{Taschner, Weinberger}
+\cfoot{}
+\rfoot{Seite \thepage \hspace{1pt} von \totalpages}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of Contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents\thispagestyle{fancy}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Changelog
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Changelog}
+
+%Table
+\begin{table}[h]
+\renewcommand{\arraystretch}{3.0}
+\centering
+\begin{tabularx}{\textwidth}{|s|s|s|s|b|}
+\hline
+\rowcolor{g1} 
+
+%Header
+\tabhvent{\textbf{Version}} & \tabhvent{\textbf{Datum}} & \tabhvent{\textbf{Status}} & \tabhvent{\textbf{Bearbeiter}} & \tabhvent{\textbf{Kommentar}}  \\ \hline
+
+%Lines
+\tabhvent{\textbf{1.0}} & \tabhvent{14.10.2015} & \tabhvent{Erstellt} &  \tabhvent{Thomas Taschner} & \tabhvent{Erstellt und Inhalte hinzugefügt}         \\
+\hline
+
+
+\end{tabularx}
+\end{table}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content Start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\justify
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Übersicht
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Übersicht}
+Erstelle eine einfache Animation unseres Sonnensystems!
+
+\section{Projektbeschreibung}
+\subsection{Anforderungen}
+In einem Team (2 Personen) sind folgende Anforderungen zu erfüllen.
+
+\begin{itemize}
+\item Ein zentraler Stern
+\item Zumindest 2 Planeten, die sich um die eigene Achse und in elliptischen Bahnen um den Zentralstern drehen
+\item Ein Planet hat zumindest einen Mond, der sich zusätzlich um seinen Planeten bewegt
+\item Weitere Planeten, Asteroiden, Galaxien,...
+\item Zumindest ein Planet wird mit einer Textur belegt
+\end{itemize}
+
+Events:
+
+\begin{itemize}
+\item Mittels Maus kann die Kameraposition angepasst werden: Zumindest eine Überkopf-Sicht und parallel der Planentenbahnen
+\item Da es sich um eine Animation handelt, kann diese auch gestoppt werden.
+\item Mittels Tasten kann die Geschwindigkeit gedrosselt und beschleunigt werden.
+\item Mittels Mausklick kann eine Punktlichtquelle und die Textierung ein- und ausgeschaltet werden.
+\item Auch Monde und Planeten werfen Schatten.
+\end{itemize}
+
+Hinweise zu OpenGL und glut:
+
+\begin{itemize}
+\item Ein Objekt kann einfach mittels glutSolidSphere() erstellt werden.
+\item Die Planten werden mittels Modelkommandos bewegt: glRotate(), glTranslate().
+\item Die Kameraposition wird mittels gluLookAt() gesetzt.
+\item Entfernte Objekte sollen kleiner und nahe Objekte größer.
+\item Wichtig ist dabei auch eine möglichst glaubhafte Darstellung. \newline gluPerspective(), glFrustum()
+\item Für das Einbetten einer Textur kann die Library Pillow verwendet werden!
+\end{itemize}
+\newpage
+\subsection{Teammitglieder}
+\begin{table}[h]
+\renewcommand{\arraystretch}{3.0}
+\centering
+\begin{tabularx}{\textwidth}{|s|s|s|s|b|}
+\hline
+
+
+\tabhvent{\textbf{Name}} &\tabhvent{\textbf{Rolle}}  \\ \hline
+
+\tabhvent{Thomas Taschner} & \tabhvent{Lead Developer} \\ \hline
+\tabhvent{Michael Weinberger} & \tabhvent{Developer} \\ \hline
+
+
+\end{tabularx}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{Dokumentenvorlage} 
+\bibliographystyle{ieeetr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
