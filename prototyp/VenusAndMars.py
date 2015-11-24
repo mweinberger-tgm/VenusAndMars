@@ -149,7 +149,7 @@ class World(DirectObject):
         self.mercury.setTexture(self.mercury_tex, 1)
         self.mercury.reparentTo(self.orbit_root_mercury)
         self.mercury.setPos(0.38 * self.orbitscale, 0, 0)
-        self.mercury.setScale(0.385 * self.sizescale)
+        self.mercury.setScale(0.15 * self.sizescale)
 
         self.venus = loader.loadModel("models/planet_sphere")
         self.venus_tex = loader.loadTexture("models/planet2.png")
@@ -178,7 +178,7 @@ class World(DirectObject):
         self.moon_tex = loader.loadTexture("models/planet5.png")
         self.moon.setTexture(self.moon_tex, 1)
         self.moon.reparentTo(self.orbit_root_moon)
-        self.moon.setScale(0.1 * self.sizescale)
+        self.moon.setScale(0.4 * self.sizescale)
         self.moon.setPos(0.1 * self.orbitscale, 0, 0)
 
     def rotatePlanets(self):
