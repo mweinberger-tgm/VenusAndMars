@@ -110,11 +110,13 @@ class World(DirectObject):
   def loadPlanets(self):
     theme = loader.loadSfx("models/starwars.mp3")
     theme.setVolume(0.8);
+    theme.setBalance(-0.5)
     theme.play()
 
     ambience = loader.loadSfx("models/ambience.mp3")
     ambience.setVolume(1.0)
-    ambience.play
+    ambience.setBalance(0.5)
+    ambience.play()
 
     self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
     self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
