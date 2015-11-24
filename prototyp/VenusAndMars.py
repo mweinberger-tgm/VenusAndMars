@@ -13,6 +13,7 @@ from panda3d.core import TextNode, Vec3, Vec4
 from direct.interval.IntervalGlobal import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
+import direct.directbase.DirectStart
 import sys
 
 #We start this tutorial with the standard class. However, the class is a
@@ -107,6 +108,10 @@ class World(DirectObject):
 #########################################################################
   
   def loadPlanets(self):
+    theme = loader.loadSfx("models/starwars.mp3")
+
+    theme.play()
+
     self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
     self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
     self.orbit_root_mars = render.attachNewNode('orbit_root_mars')
