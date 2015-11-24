@@ -234,7 +234,7 @@ Im Rahmen der Evaluierung haben wir uns auf zwei Python-3D-Frameworks konzentrie
 Pygame ist ein plattformübergreifendes Set an Python-Modulen zur Spieleprogrammierung. Mit Millionen Downloads hat das Tool auch einen annehmbaren Verbreitungsgrad sowie eine aktive Community. Die derzeitige Version ist ausgelegt auf Python 2.7, was nicht der neuesten Version entspricht, ein inoffizieller Release verschafft Abhilfe. Wir bekamen auch den Tipp, dass die 64 Bit-Version auf manchen Rechnern schlicht nicht läuft. Außerdem fehlen wichtige, benötigte Pakete, die über pip nachinstalliert werden müssen. Das Tool an sich ist ok, jedoch ist die Usability klar verbesserungswürdig.
 
 \subsection{Panda3D}
-Panda3D ist eine kostenlose Spiele-Engine, entwickelt von Disney, der Carnegie Mellon University und einigen freiwilligen Entwicklern. Mithilfe der Runtime (etwa 2 MB) ist das Tool weitgehend plattformunabhängig, der SDK wiegt etwa 200 MB. Die gute Dokumentation, die weite Verbreitung und die vielen Beispielcodes in Foren sprechen klar für Panda3D. Die vorgefertigten Beispiele (Solar System bereits existent) sind gut aufgebaut, kommentiert und einfach erweiterbar.
+Panda3D ist eine kostenlose Spiele-Engine, entwickelt von Disney, der Carnegie Mellon University und einigen freiwilligen Entwicklern. Von der technischen Seite her sind viele Features vorhanden. Mithilfe der Runtime (etwa 2 MB) ist das Tool auch weitgehend plattformunabhängig, der SDK wiegt etwa 200 MB. Die gute Dokumentation, die weite Verbreitung und die vielen Beispielcodes in Foren sprechen klar für Panda3D. Die vorgefertigten Beispiele (Solar System bereits existent) sind gut aufgebaut, kommentiert und einfach erweiterbar.
 
 \subsection{Fazit}
 PyGame bietet zwar einen guten Einstieg per Video-Tutorial (in 100 Teilen, sehr zeitaufwändig), benötigt aber vom Endbenutzer eine Vielzahl an Vorbereitungen, damit das Programm ausführbar gemacht wird.
@@ -244,7 +244,22 @@ Innerhalb von wenigen Minuten ist ein zufriedenstellendes Ergebnis sehbar, die E
 \newpage
 
 \section{Stand vom 24. November 2015}
-
+Das Example wurde angepasst, wir haben uns bereits einige Funktionen angeschaut. \\
+Die Texturen wurden ausgeschauscht mit höher aufgelösten, und ein Todesstern ist jetzt das Zentrum der Galaxis. Die Planetenbahnen wurden angepasst, auch der Hintergrund wurde verbessert. Als Testfall haben wir einen neuen Planeten hinzugefügt, inklusive Textur, Umlaufbahn, Größe und Rotationsverhalten. Im Hintergrund spielt der Imperial March (80\% Lautstärke, linker Audiokanal), und eine Weltraum-Kampfszene aus Star Wars als Ambiance-Musik  (100\% Lautstärke, rechter Audiokanal) \newline \newline
+Nächste wichtige Schritte:
+\begin{itemize}
+\item Den Code verbessern, ihn mithilfe von Designpatterns effizienter machen und aufteilen.
+\item Aufgrund der Treppchenbildung bei den Kanten 
+\item Bessere GUI, Navigation per Menü möglich (Overlay, Buttons?)
+\item Mehr Planeten, Asteroiden, ...
+\item Schatten bzw. Beleuchtung generell
+\item Hilfefenster 
+\item Hintergrund verbessern bzw. Beschränkung beim Zoomen
+\item Nice to have: Per Klick oder Tastendruck Fokus auf bestimmten Planeten
+\item Nice to have: Mehrere Galaxien (Strategy Pattern?)
+\item Nice to have: Bessere Maussteuerung
+\item (Nice to have: Raumschiffe)
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Content End

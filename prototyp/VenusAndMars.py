@@ -34,7 +34,7 @@ class World(DirectObject):
         base.setBackgroundColor(0, 0, 0)
         # base.disableMouse()
         camera.setPos(0, -50, 0)
-        # base.useDrive()
+        #base.useDrive()
 
         # The global variables we used to control the speed and size of objects
         self.yearscale = 65
