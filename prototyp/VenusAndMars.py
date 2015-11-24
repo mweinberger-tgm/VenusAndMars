@@ -13,7 +13,6 @@ from panda3d.core import TextNode, Vec3, Vec4
 from direct.interval.IntervalGlobal import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
-import direct.directbase.DirectStart
 import sys
 
 #We start this tutorial with the standard class. However, the class is a
@@ -138,7 +137,7 @@ class World(DirectObject):
     self.sun_tex = loader.loadTexture("models/todesstern.jpg")
     self.sun.setTexture(self.sun_tex, 1)
     self.sun.reparentTo(render)
-    self.sun.setScale(2 * self.sizescale)
+    self.sun.setScale(3 * self.sizescale)
 
     self.mercury = loader.loadModel("models/planet_sphere")
     self.mercury_tex = loader.loadTexture("models/planet1.jpg")
