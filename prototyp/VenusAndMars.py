@@ -180,6 +180,13 @@ class World(DirectObject):
         self.moon.reparentTo(self.orbit_root_moon)
         self.moon.setScale(0.4 * self.sizescale)
         self.moon.setPos(0.1 * self.orbitscale, 0, 0)
+		
+		self.test = loader.loadModel("models/planet_sphere")
+        self.test_tex = loader.loadTexture("models/planet7.jpg")
+        self.test.setTexture(self.test_tex, 1)
+        self.test.reparentTo(self.orbit_root_test)
+        self.test.setScale(self.sizescale)
+        self.test.setPos(self.orbitscale, 0, 0)
 
     def rotatePlanets(self):
         self.day_period_sun = self.sun.hprInterval(20, Vec3(360, 0, 0))
@@ -214,6 +221,11 @@ class World(DirectObject):
             (1.881 * self.yearscale), Vec3(360, 0, 0))
         self.day_period_mars = self.mars.hprInterval(
             (1.03 * self.dayscale), Vec3(360, 0, 0))
+		
+		self.orbit_period_test = self.orbit_root_test.hprInterval(
+            (2.881 * self.yearscale), Vec3(460, 0, 0))
+        self.day_period_test = self.test.hprInterval(
+            (2.03 * self.dayscale), Vec3(460, 0, 0))
 
         self.day_period_sun.loop()
         self.orbit_period_mercury.loop()
@@ -226,6 +238,8 @@ class World(DirectObject):
         self.day_period_moon.loop()
         self.orbit_period_mars.loop()
         self.day_period_mars.loop()
+		self.orbit_period_test.loop()
+        self.day_period_test.loop()
         # end RotatePlanets()
 
 
