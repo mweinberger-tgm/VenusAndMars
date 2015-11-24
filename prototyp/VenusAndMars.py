@@ -36,7 +36,7 @@ class World(DirectObject):
     camera.setHpr ( 0, -90, 0 )
 
     #The global variables we used to control the speed and size of objects
-    self.yearscale = 50
+    self.yearscale = 65
     self.dayscale = self.yearscale / 365.0 * 5
     self.orbitscale = 15
     self.sizescale = 1
@@ -109,14 +109,17 @@ class World(DirectObject):
   
   def loadPlanets(self):
     theme = loader.loadSfx("models/starwars.mp3")
-
+    theme.setVolume(0.8);
     theme.play()
+
+    ambience = loader.loadSfx("models/ambience.mp3")
+    ambience.setVolume(1.0)
+    ambience.play
 
     self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
     self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
     self.orbit_root_mars = render.attachNewNode('orbit_root_mars')
     self.orbit_root_earth = render.attachNewNode('orbit_root_earth')
-    self.orbit_root_nova = render.attachNewNode('orbit_root_nova')
 
     self.orbit_root_moon = (
       self.orbit_root_earth.attachNewNode('orbit_root_moon'))
