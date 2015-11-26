@@ -124,9 +124,9 @@ class World(DirectObject):
         ambience.play()
 
         dlight = DirectionalLight('dlight')
-        dlight.setColor(VBase4(0.8, 0.8, 0.5, 1))
+        dlight.setColor(VBase4(1, 1, 1, 1))
         dlnp = render.attachNewNode(dlight)
-        dlnp.setHpr(0, 0, 0)
+        dlnp.setHpr(0, 10, 0)
         render.setLight(dlnp)
 
         self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
@@ -231,7 +231,7 @@ class World(DirectObject):
             (1.03 * self.dayscale), Vec3(360, 0, 0))
 
         self.orbit_period_test = self.orbit_root_test.hprInterval(
-            (0.7 * self.yearscale), Vec3(460, 0, 0))
+            (0.7 * self.yearscale), Vec3(360, 0, 0))
 
         self.day_period_test = self.test.hprInterval(
             (0.7 * self.yearscale), Vec3(360, 0, 0))
