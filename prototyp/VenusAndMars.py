@@ -9,7 +9,7 @@
 
 import direct.directbase.DirectStart
 from direct.showbase import DirectObject
-from panda3d.core import TextNode, Vec3, Vec4
+from panda3d.core import *
 from direct.interval.IntervalGlobal import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
@@ -122,6 +122,12 @@ class World(DirectObject):
         ambience.setVolume(1.0)
         ambience.setBalance(0.5)
         ambience.play()
+
+        dlight = DirectionalLight('dlight')
+        dlight.setColor(VBase4(0.8, 0.8, 0.5, 1))
+        dlnp = render.attachNewNode(dlight)
+        dlnp.setHpr(0, 0, 0)
+        render.setLight(dlnp)
 
         self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
         self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
