@@ -134,6 +134,7 @@ class World(DirectObject):
         self.orbit_root_mars = render.attachNewNode('orbit_root_mars')
         self.orbit_root_earth = render.attachNewNode('orbit_root_earth')
         self.orbit_root_test = render.attachNewNode('orbit_root_test')
+        self.orbit_root_vadertie = render.attachNewNode('orbit_root_vadertie')
 
         self.orbit_root_moon = (
             self.orbit_root_earth.attachNewNode('orbit_root_moon'))
@@ -195,6 +196,12 @@ class World(DirectObject):
         self.test.setScale(self.sizescale)
         self.test.setPos(1.3 * self.orbitscale, 0, 0)
 
+        self.vadertie = loader.loadModel("models/benjob_xwing.x")
+        #self.vadertie = loader.loadModel("models/")
+        self.vadertie.reparentTo(self.orbit_root_test)
+        self.vadertie.setPos(0.72 * self.orbitscale, 0, 0)
+        self.vadertie.setScale(0.05 * self.sizescale)
+        self.vadertie.setHpr(0, 1, 0) #HIER ROTATION!!
 
     def rotatePlanets(self):
         self.day_period_sun = self.sun.hprInterval(20, Vec3(360, 0, 0))
@@ -236,6 +243,12 @@ class World(DirectObject):
         self.day_period_test = self.test.hprInterval(
             (0.7 * self.yearscale), Vec3(360, 0, 0))
 
+        self.orbit_period_vadertie = self.orbit_root_test.hprInterval(
+            (0.3 * self.yearscale), Vec3(360, 0, 0))
+
+        self.day_period_vadertie = self.test.hprInterval(
+            (0.5 * self.yearscale), Vec3(360, 0, 0))
+
         self.day_period_sun.loop()
         self.orbit_period_mercury.loop()
         self.day_period_mercury.loop()
@@ -249,6 +262,8 @@ class World(DirectObject):
         self.day_period_mars.loop()
         self.orbit_period_test.loop()
         self.day_period_test.loop()
+        self.orbit_period_vadertie.loop()
+        self.day_period_vadertie.loop()
 # end RotatePlanets()  # end class world
 
 w = World()
