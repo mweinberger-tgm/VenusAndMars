@@ -196,7 +196,7 @@ class World(DirectObject):
         self.test.setScale(self.sizescale)
         self.test.setPos(1.3 * self.orbitscale, 0, 0)
 
-        self.vadertie = loader.loadModel("models/benjob_xwing.x")
+        self.vadertie = loader.loadModel("models/xwing.x")
         self.vadertie.reparentTo(self.orbit_root_vadertie)
         self.vadertie.setPos(0.3 * self.orbitscale, 0, 0)
         self.vadertie.setScale(0.05 * self.sizescale)
