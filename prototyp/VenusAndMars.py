@@ -197,11 +197,10 @@ class World(DirectObject):
         self.test.setPos(1.3 * self.orbitscale, 0, 0)
 
         self.vadertie = loader.loadModel("models/benjob_xwing.x")
-        #self.vadertie = loader.loadModel("models/")
-        self.vadertie.reparentTo(self.orbit_root_test)
-        self.vadertie.setPos(0.72 * self.orbitscale, 0, 0)
+        self.vadertie.reparentTo(self.orbit_root_vadertie)
+        self.vadertie.setPos(0.3 * self.orbitscale, 0, 0)
         self.vadertie.setScale(0.05 * self.sizescale)
-        self.vadertie.setHpr(0, 1, 0) #HIER ROTATION!!
+        self.vadertie.setHpr(0, 180, 0)
 
     def rotatePlanets(self):
         self.day_period_sun = self.sun.hprInterval(20, Vec3(360, 0, 0))
@@ -241,13 +240,13 @@ class World(DirectObject):
             (0.7 * self.yearscale), Vec3(360, 0, 0))
 
         self.day_period_test = self.test.hprInterval(
-            (0.7 * self.yearscale), Vec3(360, 0, 0))
+            (4 * self.dayscale), Vec3(360, 0, 0))
 
-        self.orbit_period_vadertie = self.orbit_root_test.hprInterval(
-            (0.3 * self.yearscale), Vec3(360, 0, 0))
+        self.orbit_period_vadertie = self.orbit_root_vadertie.hprInterval(
+            (0.1 * self.yearscale), Vec3(360, 0, 0))
 
-        self.day_period_vadertie = self.test.hprInterval(
-            (0.5 * self.yearscale), Vec3(360, 0, 0))
+        self.day_period_vadertie = self.vadertie.hprInterval(
+            (25000 * self.dayscale), Vec3(360, 0, 0))
 
         self.day_period_sun.loop()
         self.orbit_period_mercury.loop()
