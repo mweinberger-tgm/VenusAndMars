@@ -32,8 +32,8 @@ class World(DirectObject):
 
         # The standard camera position and background initialization
         base.setBackgroundColor(0, 0, 0)
-        # base.disableMouse()
-        camera.setPos(0, -50, 0)
+        #base.disableMouse()
+        #camera.setPos(0, -50, 0)
         #base.useDrive()
 
         # The global variables we used to control the speed and size of objects
