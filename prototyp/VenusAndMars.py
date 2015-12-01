@@ -263,6 +263,7 @@ class World(DirectObject):
         self.day_period_test.loop()
         self.orbit_period_vadertie.loop()
         self.day_period_vadertie.loop()
+
 # end RotatePlanets()  # end class world
 
 w = World()
