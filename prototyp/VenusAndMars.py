@@ -7,6 +7,7 @@ from direct.showbase import DirectObject
 from panda3d.core import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
+from Ambience import *
 import sys
 
 class World(DirectObject):
@@ -16,17 +17,14 @@ class World(DirectObject):
 
     def __init__(self):
 
-        # The standard camera position and background initialization
-        base.setBackgroundColor(0, 0, 0)
-        #base.disableMouse()
-        #camera.setPos(0, -50, 0)
-        #base.useDrive()
-
-        # The global variables we used to control the speed and size of objects
+        # Globale Variablen
         self.yearscale = 65
         self.dayscale = self.yearscale / 365.0 * 5
         self.orbitscale = 15
         self.sizescale = 1
+        self.amb = Ambience(base, loader)
+
+        self.amb.initbg()
 
         self.loadPlanets()  # Load, texture, and position the planets
         self.rotatePlanets()  # Set up the motion to start them moving
@@ -35,9 +33,10 @@ class World(DirectObject):
                                   style=1, fg=(1, 1, 1, 1),
                                   pos=(0.9, -0.95), scale=.03)
 
-        self.yearCounter = 0  # year counter for earth years
         self.simRunning = True  # boolean to keep track of the
         # state of the global simulation
+
+        self.amb.startsound() #Sound soll erst beginnen, wenn alles fertig geladen
 
         self.accept('escape', sys.exit)  # Exit the program when escape is pressed
 
@@ -60,15 +59,6 @@ class World(DirectObject):
     # end handleEarth
 
     def loadPlanets(self):
-        theme = loader.loadSfx("models/starwars.mp3")
-        theme.setVolume(0.8);
-        theme.setBalance(-0.5)
-        theme.play()
-
-        ambience = loader.loadSfx("models/ambience.mp3")
-        ambience.setVolume(1.0)
-        ambience.setBalance(0.5)
-        ambience.play()
 
         dlight = DirectionalLight('dlight')
         dlight.setColor(VBase4(1, 1, 1, 1))
@@ -150,6 +140,7 @@ class World(DirectObject):
         self.vadertie.setHpr(0, 180, 0)
 
     def rotatePlanets(self):
+
         self.day_period_sun = self.sun.hprInterval(20, Vec3(360, 0, 0))
 
         self.orbit_period_mercury = self.orbit_root_mercury.hprInterval(
