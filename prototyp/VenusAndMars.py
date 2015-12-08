@@ -71,7 +71,7 @@ class World(DirectObject):
         self.orbit_root_moon = (
             self.orbit_root_earth.attachNewNode('orbit_root_moon'))
 
-        self.sky = loader.loadModel("models/solar_sky_sphere")
+        self.sky = loader.loadModel("models/solar_sky_sphere.egg")
 
         self.sky_tex = loader.loadTexture("models/galaxie.jpg")
         self.sky.setTexture(self.sky_tex, 1)
@@ -92,21 +92,21 @@ class World(DirectObject):
         self.mercury.setScale(0.15 * self.sizescale)
 
         self.venus = loader.loadModel("models/planet_sphere")
-        self.venus_tex = loader.loadTexture("models/planet2.png")
+        self.venus_tex = loader.loadTexture("models/planet2.jpg")
         self.venus.setTexture(self.venus_tex, 1)
         self.venus.reparentTo(self.orbit_root_venus)
         self.venus.setPos(0.72 * self.orbitscale, 0, 0)
         self.venus.setScale(0.923 * self.sizescale)
 
         self.mars = loader.loadModel("models/planet_sphere")
-        self.mars_tex = loader.loadTexture("models/planet3.png")
+        self.mars_tex = loader.loadTexture("models/planet3.jpg")
         self.mars.setTexture(self.mars_tex, 1)
         self.mars.reparentTo(self.orbit_root_mars)
         self.mars.setPos(1.52 * self.orbitscale, 0, 0)
         self.mars.setScale(0.515 * self.sizescale)
 
         self.earth = loader.loadModel("models/planet_sphere")
-        self.earth_tex = loader.loadTexture("models/planet4.png")
+        self.earth_tex = loader.loadTexture("models/planet4.jpg")
         self.earth.setTexture(self.earth_tex, 1)
         self.earth.reparentTo(self.orbit_root_earth)
         self.earth.setScale(self.sizescale)
@@ -115,7 +115,7 @@ class World(DirectObject):
         self.orbit_root_moon.setPos(self.orbitscale, 0, 0)
 
         self.moon = loader.loadModel("models/planet_sphere")
-        self.moon_tex = loader.loadTexture("models/planet5.png")
+        self.moon_tex = loader.loadTexture("models/planet5.jpg")
         self.moon.setTexture(self.moon_tex, 1)
         self.moon.reparentTo(self.orbit_root_moon)
         self.moon.setScale(0.4 * self.sizescale)

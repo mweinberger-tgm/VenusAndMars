@@ -15,20 +15,20 @@ class Ambience:
         # Hintergrundfarbe setzen
         self.base.setBackgroundColor(0, 0, 0)
 
-        # Limitierung der Kamera, flüssigere Kamerafahrten
+        # Limitierung der Kamera, flÃ¼ssigere Kamerafahrten
         #base.useDrive()
 
     """
-    Startet den Imperial March & den Ambience-Sound mit kämpfenden X-Wings
+    Startet den Imperial March & den Ambience-Sound mit kÃ¤mpfenden X-Wings
     """
     def startsound(self):
 
-        theme = self.loader.loadSfx("models/starwars.mp3")
+        theme = self.loader.loadSfx("models/starwars.mp4")
         theme.setVolume(self.volumeimpmarch)
         theme.setBalance(self.balanceimpmarch)
         theme.play()
 
-        ambiance = self.loader.loadSfx("models/ambience.mp3")
+        ambiance = self.loader.loadSfx("models/ambience.mp4")
         ambiance.setVolume(self.volumeambience)
         ambiance.setBalance(self.balanceambience)
         ambiance.play()
