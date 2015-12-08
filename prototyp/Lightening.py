@@ -1,5 +1,5 @@
 __author__ = 'Taschner | Weinberger'
 
 """
-Zustädnig für die Beleuchtung
+Die Beleuchtung des Solarsystems, da der Todesstern keine Lichtquelle ist,
 """

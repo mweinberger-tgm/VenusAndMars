@@ -24,15 +24,19 @@ class Ambience:
     def startsound(self):
 
         theme = self.loader.loadSfx("models/starwars.mp3")
-        theme.setVolume(0.8) #etwas leiser als Ambiance
-        theme.setBalance(-0.5) #linker Audiokanal
+        theme.setVolume(self.volumeimpmarch)
+        theme.setBalance(self.balanceimpmarch)
         theme.play()
 
-        ambience = self.loader.loadSfx("models/ambience.mp3")
-        ambience.setVolume(1.0)
-        ambience.setBalance(0.5) #rechter Audiokanal
-        ambience.play()
+        ambiance = self.loader.loadSfx("models/ambience.mp3")
+        ambiance.setVolume(self.volumeambience)
+        ambiance.setBalance(self.balanceambience)
+        ambiance.play()
 
-    def __init__(self, base, loader):
+    def __init__(self, base, loader, volumeimpmarch, volumeambience, balanceimpmarch, balanceambience):
         self.base = base
         self.loader = loader
+        self.volumeimpmarch = volumeimpmarch
+        self.volumeambience = volumeambience
+        self.balanceimpmarch = balanceimpmarch
+        self.balanceambience = balanceambience

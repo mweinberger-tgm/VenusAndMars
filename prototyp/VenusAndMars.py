@@ -11,9 +11,6 @@ from Ambience import *
 import sys
 
 class World(DirectObject):
-    def genLabelText(self, text, i):
-        return OnscreenText(text=text, pos=(-1.3, .95 - .05 * i), fg=(1, 1, 1, 1),
-                            align=TextNode.ALeft, scale=.05, mayChange=1)
 
     def __init__(self):
 
@@ -22,16 +19,14 @@ class World(DirectObject):
         self.dayscale = self.yearscale / 365.0 * 5
         self.orbitscale = 15
         self.sizescale = 1
-        self.amb = Ambience(base, loader)
+        self.amb = Ambience(base, loader, 0.8, 1.0, -0.5, 0.5)
 
         self.amb.initbg()
 
+        self.title = OnscreenText(text="Venus and Mars - Taschner | Weinberger 5BHIT", style=1, fg=(1, 1, 1, 1), pos=(0.9, -0.95), scale=.03)
+
         self.loadPlanets()  # Load, texture, and position the planets
         self.rotatePlanets()  # Set up the motion to start them moving
-
-        self.title = OnscreenText(text="Venus and Mars - Taschner | Weinberger 5BHIT",
-                                  style=1, fg=(1, 1, 1, 1),
-                                  pos=(0.9, -0.95), scale=.03)
 
         self.simRunning = True  # boolean to keep track of the
         # state of the global simulation
