@@ -6,7 +6,7 @@ Zusammenfassung der Ambience, des Hintergrunds und des Sounds
 """
 
 
-class Ambience:
+class Ambiance:
 
     """
     Setzt die Hintergrundfarbe, initialisiert die Umgebungssphere mit Sternenhimmel
@@ -19,18 +19,20 @@ class Ambience:
         #base.useDrive()
 
     """
-    Startet den Imperial March & den Ambience-Sound mit kÃ¤mpfenden X-Wings
+    Startet den Imperial March & den Ambiance-Sound mit kÃ¤mpfenden X-Wings
     """
     def startsound(self):
 
         theme = self.loader.loadSfx("models/starwars.mp4")
         theme.setVolume(self.volumeimpmarch)
         theme.setBalance(self.balanceimpmarch)
+        theme.setLoop(True) # Sonst nur 1 Play!
         theme.play()
 
         ambiance = self.loader.loadSfx("models/ambience.mp4")
         ambiance.setVolume(self.volumeambience)
         ambiance.setBalance(self.balanceambience)
+        ambiance.setLoop(True)
         ambiance.play()
 
     def __init__(self, base, loader, volumeimpmarch, volumeambience, balanceimpmarch, balanceambience):
