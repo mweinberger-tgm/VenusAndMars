@@ -8,9 +8,12 @@ from panda3d.core import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
 from Ambience import *
+from Lighting import *
 import sys
 
+
 class World(DirectObject):
+
 
     def __init__(self):
 
@@ -20,6 +23,7 @@ class World(DirectObject):
         self.orbitscale = 15
         self.sizescale = 1
         self.amb = Ambience(base, loader, 0.8, 1.0, -0.5, 0.5)
+        self.lig = Lighting(render)
 
         self.amb.initbg()
 
@@ -27,6 +31,8 @@ class World(DirectObject):
 
         self.loadPlanets()  # Load, texture, and position the planets
         self.rotatePlanets()  # Set up the motion to start them moving
+
+        self.lig.activateshadows()
 
         self.simRunning = True  # boolean to keep track of the
         # state of the global simulation
@@ -54,12 +60,6 @@ class World(DirectObject):
     # end handleEarth
 
     def loadPlanets(self):
-
-        dlight = DirectionalLight('dlight')
-        dlight.setColor(VBase4(1, 1, 1, 1))
-        dlnp = render.attachNewNode(dlight)
-        dlnp.setHpr(0, 10, 0)
-        render.setLight(dlnp)
 
         self.orbit_root_mercury = render.attachNewNode('orbit_root_mercury')
         self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
