@@ -1,3 +1,7 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
+
+"""
+Der ganze Rest
+"""
 
 class Body(self, orbit, ):

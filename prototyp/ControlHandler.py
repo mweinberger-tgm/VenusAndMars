@@ -1,1 +1,5 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
+
+"""
+Zuständig für die Tastatureingaben.
+"""

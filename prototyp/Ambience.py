@@ -1,1 +1,5 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
+
+"""
+Ambience, der Hintergrund und die Sounds
+"""
