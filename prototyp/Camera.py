@@ -1,1 +1,5 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
+
+"""
+Hier wird die Kamera angesteuert
+"""

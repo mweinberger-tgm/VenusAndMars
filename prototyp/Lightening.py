@@ -1,1 +1,5 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
+
+"""
+Zustädnig für die Beleuchtung
+"""

@@ -1,3 +1,7 @@
+# Entnommen aus den Panda3D-Samples
+# Author: Shao Zhang and Phil Saltzman
+# Last Updated: 4/20/2005
+
 import direct.directbase.DirectStart
 from direct.showbase import DirectObject
 from panda3d.core import *

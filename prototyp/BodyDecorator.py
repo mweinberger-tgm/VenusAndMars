@@ -1,4 +1,4 @@
-__author__ = 'Thomas'
+__author__ = 'Taschner | Weinberger'
 
 """
 Bestehende Objekte erweitern
