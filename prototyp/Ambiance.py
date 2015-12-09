@@ -1,4 +1,3 @@
-# coding=utf-8
 __author__ = 'Taschner | Weinberger'
 
 """
@@ -15,11 +14,11 @@ class Ambiance:
         # Hintergrundfarbe setzen
         self.base.setBackgroundColor(0, 0, 0)
 
-        # Limitierung der Kamera, flüssigere Kamerafahrten
+        # Limitierung der Kamera, fluessigere Kamerafahrten
         #base.useDrive()
 
     """
-    Startet den Imperial March & den Ambiance-Sound mit kÃ¤mpfenden X-Wings
+    Startet den Imperial March und den Ambiance-Sound mit kaempfenden X-Wings
     """
     def startsound(self):
 

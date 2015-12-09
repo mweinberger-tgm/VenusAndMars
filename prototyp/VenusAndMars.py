@@ -10,6 +10,7 @@ from direct.showbase.DirectObject import DirectObject
 from Ambiance import *
 from Lighting import *
 from Galaxy import *
+from Object import *
 import sys
 
 
@@ -34,7 +35,7 @@ class World(DirectObject):
         self.galaxy.loadenvironment()
 
         self.loadPlanets()  # Load, texture, and position the planets
-        self.rotatePlanets()  # Set up the motion to start them moving
+        #self.rotatePlanets()  # Set up the motion to start them moving
 
         self.lig.activateshadows()
 
@@ -56,11 +57,16 @@ class World(DirectObject):
         self.orbit_root_moon = (
             self.orbit_root_earth.attachNewNode('orbit_root_moon'))  # In den Decorator!
 
+        """
         self.sun = loader.loadModel("models/planet_sphere")
         self.sun_tex = loader.loadTexture("models/todesstern.jpg")
         self.sun.setTexture(self.sun_tex, 1)
         self.sun.reparentTo(render)
         self.sun.setScale(3 * self.sizescale)
+        """
+
+        self.sun = Object("deathstar", "models/planet_sphere", "models/todesstern.jpg", 3, loader, render)
+        self.sun.loadobject()
 
         self.mercury = loader.loadModel("models/planet_sphere")
         self.mercury_tex = loader.loadTexture("models/planet1.jpg")
