@@ -13,3 +13,17 @@ class BodyFactory(object):
             return Deathstar()
         elif object_name == 'mercury':
             return Mercury()
+        elif object_name == 'venus':
+            return Venus()
+        elif object_name == 'mars':
+            return Mars()
+        elif object_name == 'earth':
+            return Earth()
+        elif object_name == 'moon':
+            return Moon()
+        elif object_name == 'tatooine':
+            return Tatooine()
+        elif object_name == 'mordor':
+            return Mordor()
+        elif object_name == 'xwing':
+            return Xwing()

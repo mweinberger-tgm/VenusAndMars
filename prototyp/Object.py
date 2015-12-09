@@ -44,3 +44,12 @@ class Object:
 
         self.orbit_period.loop()
         self.day_period.loop()
+
+    def loadxwing(self):
+        self.orbit_root = self.render.attachNewNode('orbit_root_' + self.name)
+
+        self.name = self.loader.loadModel(self.pathmodel)
+        self.name.reparentTo(self.orbit_root)
+        self.name.setPos(self.position * GlobalVar.ORBITSCALE, 0, 0)
+        self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)
+        self.name.setHpr(0, 180, 0)
