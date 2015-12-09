@@ -53,12 +53,11 @@ class World(DirectObject):
 
         earth = BodyFactory.create_object('earth')
         earth.loadobject()
-        earth.rotateobject(1, 1.881)
+        earth.rotateobject(1, 1.5)
 
         moon = BodyFactory.create_object('moon')
-        orbit_root_moon = (earth.orbit_root.attachNewNode('orbit_root_moon'))
-        moon.loadmoon(orbit_root_moon)
-        moon.rotateobject(.0749, .0749)
+        moon.loadmoon(earth)
+        moon.rotateobject(.1, 1)
 
         tatooine = BodyFactory.create_object('tatooine')
         tatooine.loadobject()

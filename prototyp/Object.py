@@ -54,12 +54,13 @@ class Object:
         self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)
         self.name.setHpr(0, 180, 0)
 
-    def loadmoon(self, orbit_root):
-        self.orbit_root = orbit_root
-
+    def loadmoon(self, earth):
+        self.orbit_root = (earth.orbit_root.attachNewNode('orbit_root_moon'))
         self.orbit_root.setPos(GlobalVar.ORBITSCALE, 0, 0)
+        ###
         self.name = self.loader.loadModel(self.pathmodel)
         self.tex = self.loader.loadTexture(self.pathtexture)
         self.name.setTexture(self.tex, 1)
         self.name.reparentTo(self.orbit_root)
+        self.name.setPos(0.1 * GlobalVar.ORBITSCALE, 0, 0)
         self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)
