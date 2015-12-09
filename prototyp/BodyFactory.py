@@ -1,4 +1,4 @@
-from Object import *
+from Planets import *
 __author__ = 'Taschner | Weinberger'
 
 """
@@ -11,5 +11,5 @@ class BodyFactory(object):
     def create_object(object_name):
         if object_name == 'deathstar':
             return Deathstar()
-        elif object_name == 'Deluxe':
-            return None
+        elif object_name == 'mercury':
+            return Mercury()

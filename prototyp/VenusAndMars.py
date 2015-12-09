@@ -58,24 +58,13 @@ class World(DirectObject):
         self.orbit_root_moon = (
             self.orbit_root_earth.attachNewNode('orbit_root_moon'))  # In den Decorator!
 
-        """
-        self.sun = loader.loadModel("models/planet_sphere")
-        self.sun_tex = loader.loadTexture("models/todesstern.jpg")
-        self.sun.setTexture(self.sun_tex, 1)
-        self.sun.reparentTo(render)
-        self.sun.setScale(3 * self.sizescale)
-        """
+        deathstar = BodyFactory.create_object('deathstar')
+        deathstar.loadobject()
+        deathstar.rotatesun()
 
-        #self.sun = Object("deathstar", "models/planet_sphere", "models/todesstern.jpg", 3, loader, render)
-        #self.sun.loadobject()
-        self.sun = BodyFactory.create_object('deathstar').loadobject()
-
-        self.mercury = loader.loadModel("models/planet_sphere")
-        self.mercury_tex = loader.loadTexture("models/planet1.jpg")
-        self.mercury.setTexture(self.mercury_tex, 1)
-        self.mercury.reparentTo(self.orbit_root_mercury)
-        self.mercury.setPos(0.38 * self.orbitscale, 0, 0)
-        self.mercury.setScale(0.15 * self.sizescale)
+        mercury = BodyFactory.create_object('mercury')
+        mercury.loadobject()
+        mercury.rotateobject(0.241, 59)
 
         self.venus = loader.loadModel("models/planet_sphere")
         self.venus_tex = loader.loadTexture("models/planet2.jpg")
@@ -122,20 +111,16 @@ class World(DirectObject):
 
     def rotatePlanets(self):
 
-        self.day_period_sun = self.sun.hprInterval(20, Vec3(360, 0, 0))
-
-        self.orbit_period_mercury = self.orbit_root_mercury.hprInterval(
-            (0.241 * self.yearscale), Vec3(360, 0, 0))
-        self.day_period_mercury = self.mercury.hprInterval(
-            (59 * self.dayscale), Vec3(360, 0, 0))
 
         self.orbit_period_venus = self.orbit_root_venus.hprInterval(
             (0.615 * self.yearscale), Vec3(360, 0, 0))
         self.day_period_venus = self.venus.hprInterval(
             (243 * self.dayscale), Vec3(360, 0, 0))
 
-        self.orbit_period_earth = self.orbit_root_earth.hprInterval(self.yearscale, Vec3(360, 0, 0))
-        self.day_period_earth = self.earth.hprInterval(1.881 * self.dayscale, Vec3(360, 0, 0))
+        self.orbit_period_earth = self.orbit_root_earth.hprInterval(
+            self.yearscale, Vec3(360, 0, 0))
+        self.day_period_earth = self.earth.hprInterval(
+            1.881 * self.dayscale, Vec3(360, 0, 0))
 
         self.orbit_period_moon = self.orbit_root_moon.hprInterval(
             (.0749 * self.yearscale), Vec3(360, 0, 0))
