@@ -1,4 +1,5 @@
 from Constants import *
+
 __author__ = 'Taschner | Weinberger'
 
 """
@@ -7,9 +8,7 @@ Planeten
 
 
 class Object:
-
     def __init__(self, name, pathmodel, pathtexture, planetsize, loader, render):
-
         self.name = name
         self.pathmodel = pathmodel
         self.pathtexture = pathtexture
@@ -21,7 +20,6 @@ class Object:
         self.tex = None
 
     def loadobject(self):
-
         self.orbit_root = self.render.attachNewNode('orbit_root_' + self.name)
 
         self.name = self.loader.loadModel(self.pathmodel)
@@ -29,3 +27,13 @@ class Object:
         self.name.setTexture(self.tex, 1)
         self.name.reparentTo(self.render)
         self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)
+
+
+class Deathstar(Object):
+    def __init__(self):
+        self.name = "deathstar"
+        self.pathmodel = "models/planet_sphere"
+        self.pathtexture = "models/todesstern.jpg"
+        self.planetsize = 3
+        self.loader = loader
+        self.render = render

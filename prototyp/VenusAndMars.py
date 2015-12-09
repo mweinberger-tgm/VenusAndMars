@@ -11,6 +11,7 @@ from Ambiance import *
 from Lighting import *
 from Galaxy import *
 from Object import *
+from BodyFactory import *
 import sys
 
 
@@ -65,8 +66,9 @@ class World(DirectObject):
         self.sun.setScale(3 * self.sizescale)
         """
 
-        self.sun = Object("deathstar", "models/planet_sphere", "models/todesstern.jpg", 3, loader, render)
-        self.sun.loadobject()
+        #self.sun = Object("deathstar", "models/planet_sphere", "models/todesstern.jpg", 3, loader, render)
+        #self.sun.loadobject()
+        self.sun = BodyFactory.create_object('deathstar').loadobject()
 
         self.mercury = loader.loadModel("models/planet_sphere")
         self.mercury_tex = loader.loadTexture("models/planet1.jpg")
