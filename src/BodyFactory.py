@@ -1,14 +1,27 @@
-from Planets import *
-__author__ = 'Taschner | Weinberger'
+"""
+Anwendung der Factory Patterns zwecks Instanzierung der Objekte im Solarsystem.
+"""
 
-"""
-Die Factory fuer oft initialisierte Objekte
-"""
+from Planets import *
+
+__author__ = 'Thomas Taschner, Michael Weinberger'
+__date__ = 20151209
+__version__ = 1.0
 
 
 class BodyFactory(object):
+    """
+    Dient zur Instanzierung aller Objekte im Solarsystem. Nimmt einen Objektnamen entgegen und
+    erstellt ein entsprechendes Objekt.
+    """
+
     @staticmethod
     def create_object(object_name):
+        """
+        Statische Methode, die die Objekte instanziert.
+        :param object_name: Name des zur instanzierenden Objekts
+        :return: das entsprechende Objekt
+        """
         if object_name == 'deathstar':
             return Deathstar()
         elif object_name == 'mercury':

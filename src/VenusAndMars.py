@@ -1,6 +1,12 @@
-# Entnommen aus den Panda3D-Samples
-# Author: Shao Zhang and Phil Saltzman
-# Last Updated: 4/20/2005
+"""
+Die Main-Methode, die das 'Sonnensystem' startet.
+Inspiriert von den Panda3D Samples.
+Setzt alles zusammen und startet die Applikation.
+"""
+
+__author__ = 'Thomas Taschner, Michael Weinberger'
+__date__ = 20151209
+__version__ = 1.0
 
 import direct.directbase.DirectStart
 from direct.showbase import DirectObject
@@ -10,27 +16,19 @@ from direct.showbase.DirectObject import DirectObject
 from Ambiance import *
 from Lighting import *
 from Galaxy import *
-from Object import *
 from BodyFactory import *
 import sys
 
 
 class World(DirectObject):
-
-
     def __init__(self):
-
-        # Globale Variablen
-        self.yearscale = 65
-        self.dayscale = self.yearscale / 365.0 * 5
-        self.orbitscale = 15
-        self.sizescale = 1
         self.amb = Ambiance(base, loader, 1.0, 0.6, -0.5, 0.5)
         self.lig = Lighting(render)
 
         self.amb.initbg()
 
-        self.title = OnscreenText(text="Venus and Mars - Taschner | Weinberger 5BHIT", style=1, fg=(1, 1, 1, 1), pos=(0.9, -0.95), scale=.03)
+        self.title = OnscreenText(text="Venus and Mars - Taschner | Weinberger 5BHIT", style=1, fg=(1, 1, 1, 1),
+                                  pos=(0.9, -0.95), scale=.03)
 
         self.galaxy = Galaxy("models/solar_sky_sphere.egg", "models/galaxie.jpg", 1000, loader, render)
         self.galaxy.loadenvironment()
@@ -73,13 +71,10 @@ class World(DirectObject):
 
         self.lig.activateshadows()
 
-        self.amb.startsound() # Sound soll erst beginnen, wenn alles fertig geladen ist
+        self.amb.startsound()  # Sound soll erst beginnen, wenn alles fertig geladen ist
 
-        self.accept('escape', sys.exit)  # Exit the program when escape is pressed
+        self.accept('escape', sys.exit)  # Programm schliessen, wenn Escape gedrueckt wird
 
-    # end __init__
-
-# end class world
 
 w = World()
 
