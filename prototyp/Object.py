@@ -23,7 +23,7 @@ class Object:
         self.orbit_period = None
 
     def loadobject(self):
-        self.orbit_root = self.render.attachNewNode('orbit_root_' + self.name)
+        self.orbit_root = self.render.attachNewNode(self.name)
 
         self.name = self.loader.loadModel(self.pathmodel)
         self.tex = self.loader.loadTexture(self.pathtexture)
@@ -46,10 +46,20 @@ class Object:
         self.day_period.loop()
 
     def loadxwing(self):
-        self.orbit_root = self.render.attachNewNode('orbit_root_' + self.name)
+        self.orbit_root = self.render.attachNewNode(self.name)
 
         self.name = self.loader.loadModel(self.pathmodel)
         self.name.reparentTo(self.orbit_root)
         self.name.setPos(self.position * GlobalVar.ORBITSCALE, 0, 0)
         self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)
         self.name.setHpr(0, 180, 0)
+
+    def loadmoon(self, orbit_root):
+        self.orbit_root = orbit_root
+
+        self.orbit_root.setPos(GlobalVar.ORBITSCALE, 0, 0)
+        self.name = self.loader.loadModel(self.pathmodel)
+        self.tex = self.loader.loadTexture(self.pathtexture)
+        self.name.setTexture(self.tex, 1)
+        self.name.reparentTo(self.orbit_root)
+        self.name.setScale(self.planetsize * GlobalVar.SIZESCALE)

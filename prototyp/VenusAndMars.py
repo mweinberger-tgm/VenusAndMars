@@ -12,7 +12,6 @@ from Lighting import *
 from Galaxy import *
 from Object import *
 from BodyFactory import *
-from BodyDecorator import *
 import sys
 
 
@@ -56,11 +55,9 @@ class World(DirectObject):
         earth.loadobject()
         earth.rotateobject(1, 1.881)
 
-        self.orbit_root_moon = (
-            self.orbit_root_earth.attachNewNode('orbit_root_moon'))  # In den Decorator!7
-        self.orbit_root_moon.setPos(self.orbitscale, 0, 0)
         moon = BodyFactory.create_object('moon')
-        moon.loadobject()
+        orbit_root_moon = (earth.orbit_root.attachNewNode('orbit_root_moon'))
+        moon.loadmoon(orbit_root_moon)
         moon.rotateobject(.0749, .0749)
 
         tatooine = BodyFactory.create_object('tatooine')
