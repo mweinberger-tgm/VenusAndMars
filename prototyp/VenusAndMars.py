@@ -7,7 +7,7 @@ from direct.showbase import DirectObject
 from panda3d.core import *
 from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
-from Ambience import *
+from Ambiance import *
 from Lighting import *
 import sys
 
@@ -22,7 +22,7 @@ class World(DirectObject):
         self.dayscale = self.yearscale / 365.0 * 5
         self.orbitscale = 15
         self.sizescale = 1
-        self.amb = Ambience(base, loader, 0.8, 1.0, -0.5, 0.5)
+        self.amb = Ambiance(base, loader, 1.0, 0.6, -0.5, 0.5)
         self.lig = Lighting(render)
 
         self.amb.initbg()
@@ -34,30 +34,11 @@ class World(DirectObject):
 
         self.lig.activateshadows()
 
-        self.simRunning = True  # boolean to keep track of the
-        # state of the global simulation
-
-        self.amb.startsound() #Sound soll erst beginnen, wenn alles fertig geladen
+        self.amb.startsound() #Sound soll erst beginnen, wenn alles fertig geladen ist
 
         self.accept('escape', sys.exit)  # Exit the program when escape is pressed
 
     # end __init__
-
-    def toggleInterval(self, interval):
-        if interval.isPlaying():
-            interval.pause()
-        else:
-            interval.resume()
-
-    # end toggleInterval
-
-    def handleEarth(self):
-        self.togglePlanet("Earth", self.day_period_earth,
-                          self.orbit_period_earth, self.ekeyEventText)
-        self.togglePlanet("Moon", self.day_period_moon,
-                          self.orbit_period_moon)
-
-    # end handleEarth
 
     def loadPlanets(self):
 
