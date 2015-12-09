@@ -9,6 +9,7 @@ from direct.gui.DirectGui import *
 from direct.showbase.DirectObject import DirectObject
 from Ambiance import *
 from Lighting import *
+from Galaxy import *
 import sys
 
 
@@ -29,12 +30,15 @@ class World(DirectObject):
 
         self.title = OnscreenText(text="Venus and Mars - Taschner | Weinberger 5BHIT", style=1, fg=(1, 1, 1, 1), pos=(0.9, -0.95), scale=.03)
 
+        self.galaxy = Galaxy("models/solar_sky_sphere.egg", "models/galaxie.jpg", 1000, loader, render)
+        self.galaxy.loadenvironment()
+
         self.loadPlanets()  # Load, texture, and position the planets
         self.rotatePlanets()  # Set up the motion to start them moving
 
         self.lig.activateshadows()
 
-        self.amb.startsound() #Sound soll erst beginnen, wenn alles fertig geladen ist
+        self.amb.startsound() # Sound soll erst beginnen, wenn alles fertig geladen ist
 
         self.accept('escape', sys.exit)  # Exit the program when escape is pressed
 
@@ -50,14 +54,7 @@ class World(DirectObject):
         self.orbit_root_vadertie = render.attachNewNode('orbit_root_vadertie')
 
         self.orbit_root_moon = (
-            self.orbit_root_earth.attachNewNode('orbit_root_moon'))
-
-        self.sky = loader.loadModel("models/solar_sky_sphere.egg")
-
-        self.sky_tex = loader.loadTexture("models/galaxie.jpg")
-        self.sky.setTexture(self.sky_tex, 1)
-        self.sky.reparentTo(render)
-        self.sky.setScale(40)
+            self.orbit_root_earth.attachNewNode('orbit_root_moon'))  # In den Decorator!
 
         self.sun = loader.loadModel("models/planet_sphere")
         self.sun_tex = loader.loadTexture("models/todesstern.jpg")

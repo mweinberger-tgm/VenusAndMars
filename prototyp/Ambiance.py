@@ -15,7 +15,7 @@ class Ambiance:
         # Hintergrundfarbe setzen
         self.base.setBackgroundColor(0, 0, 0)
 
-        # Limitierung der Kamera, flÃ¼ssigere Kamerafahrten
+        # Limitierung der Kamera, flüssigere Kamerafahrten
         #base.useDrive()
 
     """
