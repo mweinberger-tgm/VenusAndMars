@@ -1,0 +1,51 @@
+# PynSource Version 1.1
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin.'}
+{'type':'umlshape', 'id':'Ambiance', 'x':425, 'y':153, 'width':130, 'height':205, 'attrs':'base|loader|volumeimpmarch|volumeambience|balanceimpmarch|balanceambience', 'meths':'__init__|initbg|startsound'}
+{'type':'umlshape', 'id':'BodyFactory', 'x':210, 'y':117, 'width':131, 'height':67, 'attrs':'', 'meths':'create_object'}
+{'type':'umlshape', 'id':'object', 'x':247, 'y':250, 'width':76, 'height':31, 'attrs':'', 'meths':''}
+{'type':'umlshape', 'id':'GlobalVar', 'x':46, 'y':103, 'width':109, 'height':115, 'attrs':'YEARSCALE|DAYSCALE|ORBITSCALE|SIZESCALE', 'meths':''}
+{'type':'umlshape', 'id':'Galaxy', 'x':510, 'y':419, 'width':130, 'height':173, 'attrs':'pathmodel|pathtexture|galaxysize|loader|render', 'meths':'__init__|loadenvironment'}
+{'type':'umlshape', 'id':'Lighting', 'x':810, 'y':356, 'width':130, 'height':109, 'attrs':'render', 'meths':'__init__|activateshadows'}
+{'type':'umlshape', 'id':'Object', 'x':1327, 'y':369, 'width':106, 'height':333, 'attrs':'name|pathmodel|pathtexture|planetsize|loader|render|position|orbit_root|tex|day_period|orbit_period', 'meths':'__init__|loadobject|rotatesun|rotateobject|loadxwing|loadmoon'}
+{'type':'umlshape', 'id':'Mercury', 'x':1561, 'y':416, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Deathstar', 'x':1046, 'y':721, 'width':109, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Moon', 'x':1536, 'y':166, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Tatooine', 'x':1561, 'y':671, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Xwing', 'x':826, 'y':696, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Mars', 'x':1346, 'y':746, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Earth', 'x':1321, 'y':131, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Venus', 'x':996, 'y':446, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'Mordor', 'x':1131, 'y':216, 'width':98, 'height':189, 'attrs':'name|pathmodel|pathtexture|position|planetsize|loader|render', 'meths':'__init__'}
+{'type':'umlshape', 'id':'World', 'x':688, 'y':220, 'width':74, 'height':141, 'attrs':'amb|lig|title|galaxy', 'meths':'__init__'}
+{'type':'umlshape', 'id':'DirectObject', 'x':774, 'y':165, 'width':142, 'height':31, 'attrs':'', 'meths':''}
+{'type':'umlshape', 'id':'OnscreenText', 'x':579, 'y':165, 'width':142, 'height':31, 'attrs':'', 'meths':''}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mercury_to_Object', 'source':'Mercury', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Deathstar_to_Object', 'source':'Deathstar', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Moon_to_Object', 'source':'Moon', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Tatooine_to_Object', 'source':'Tatooine', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Xwing_to_Object', 'source':'Xwing', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mars_to_Object', 'source':'Mars', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Earth_to_Object', 'source':'Earth', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Venus_to_Object', 'source':'Venus', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mordor_to_Object', 'source':'Mordor', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'BodyFactory_to_object', 'source':'BodyFactory', 'target':'object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mercury_to_Object', 'source':'Mercury', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Deathstar_to_Object', 'source':'Deathstar', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Moon_to_Object', 'source':'Moon', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Tatooine_to_Object', 'source':'Tatooine', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Xwing_to_Object', 'source':'Xwing', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mars_to_Object', 'source':'Mars', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Earth_to_Object', 'source':'Earth', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Venus_to_Object', 'source':'Venus', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Mordor_to_Object', 'source':'Mordor', 'target':'Object', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'World_to_DirectObject', 'source':'World', 'target':'DirectObject', 'uml_edge_type':'generalisation'}
+{'type':'edge', 'id':'Ambiance_to_World', 'source':'Ambiance', 'target':'World', 'uml_edge_type':'composition'}
+{'type':'edge', 'id':'Lighting_to_World', 'source':'Lighting', 'target':'World', 'uml_edge_type':'composition'}
+{'type':'edge', 'id':'OnscreenText_to_World', 'source':'OnscreenText', 'target':'World', 'uml_edge_type':'composition'}
+{'type':'edge', 'id':'Galaxy_to_World', 'source':'Galaxy', 'target':'World', 'uml_edge_type':'composition'}
